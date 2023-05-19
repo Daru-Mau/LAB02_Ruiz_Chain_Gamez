@@ -1,0 +1,12 @@
+#define NUM 257
+#define OP_SUM 258
+#define OP_MINUS 259
+#define OP_MULT 260
+#define OP_DIV 261
+#define OP_NOT 262
+#define OP_AND 263
+#define OP_OR 264
+#define OP_XOR 265
+#define PAR_A 266
+#define PAR_C 267
+#define EOL 268
