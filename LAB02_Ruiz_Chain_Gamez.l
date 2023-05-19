@@ -34,6 +34,7 @@ typedef int YYSTYPE;
                 printf("Errores Sintácticos: %d", parse_errors);
             }
         } num_count=0; printf("\n"); return EOL;}
+[\r\n]  ;
 [ \t]        ; /* ignore whitespace */
 [a-zA-Z]+    { printf("ERROR Léxico!!\n"); lex_errors++; return *yytext; }
 [0-9]+       { printf("ERROR Léxico!!\n"); lex_errors++; return *yytext; }
