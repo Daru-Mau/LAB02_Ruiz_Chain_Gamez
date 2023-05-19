@@ -1,64 +1,16 @@
-Expresion: + 01 xor 10
-op-sum = +
-num1 = 01
-op-xor = xor
-num2 = 10
-Análisis Sintáctico
-Errores Sintácticos: 1
-
-
-Expresion: + / * - and or ( )
-op-sum = +
-op-div = /
-op-mult = *
-op-rest = -
+Expresion: not (101 or 100) and 10 + 11
+op-not = not
+par-a = (
+num1 = 101
+op-or = or
+num2 = 100
+par-c= )
 op-and = and
-op-or = or
-par-a = (
-par-c= )
-Análisis Sintáctico
-Errores Sintácticos: 1
-
-
-Expresion: or )(101 or 100) + -)-00
-op-or = or
-par-c= )
-par-a = (
-num1 = 101
-op-or = or
-num2 = 100
-par-c= )
+num3 = 10
 op-sum = +
-op-rest = -
-par-c= )
-op-rest = -
-num3 = 00
+num4 = 11
 Análisis Sintáctico
-Errores Sintácticos: 1
-
-
-Expresion: or )(101 or ) 100
-op-or = or
-par-c= )
-par-a = (
-num1 = 101
-op-or = or
-par-c= )
-num2 = 100
-Análisis Sintáctico
-Errores Sintácticos: 1
-
-
-Expresion: 1001 or a * (20)
-num1 = 1001
-op-or = or
-ERROR Léxico!!
-op-mult = *
-par-a = (
-ERROR Léxico!!
-par-c= )
-Análisis Sintáctico
-No se ejecuta.
+Correcto!!
 
 
 Expresion: 110110 + 1001 - 101
@@ -82,112 +34,7 @@ Análisis Sintáctico
 Errores Sintácticos: 1
 
 
-Expresion: ) 11 or 01 xor and 10 (
-par-c= )
-num1 = 11
-op-or = or
-num2 = 01
-op-xor = xor
-op-and = and
-num3 = 10
-par-a = (
-Análisis Sintáctico
-Errores Sintácticos: 2
-
-
-Expresion: and (101 or 100) and 10
-op-and = and
-par-a = (
-num1 = 101
-op-or = or
-num2 = 100
-par-c= )
-op-and = and
-num3 = 10
-Análisis Sintáctico
-Errores Sintácticos: 1
-
-
-Expresion: 110110 ++ 1001 - 101 and *
-num1 = 110110
-op-sum = +
-op-sum = +
-num2 = 1001
-op-rest = -
-num3 = 101
-op-and = and
-op-mult = *
-Análisis Sintáctico
-Errores Sintácticos: 2
-
-
-Expresion: not (101 or 120) dan 10 + 11
-op-not = not
-par-a = (
-num1 = 101
-op-or = or
-ERROR Léxico!!
-par-c= )
-ERROR Léxico!!
-num2 = 10
-op-sum = +
-num3 = 11
-Análisis Sintáctico
-No se ejecuta.
-
-
-Expresion: not (101 or 100) and 10 + 11
-op-not = not
-par-a = (
-num1 = 101
-op-or = or
-num2 = 100
-par-c= )
-op-and = and
-num3 = 10
-op-sum = +
-num4 = 11
-Análisis Sintáctico
-Correcto!!
-
-
-Expresion: not (((101 or 120) and 10 + 11 
-op-not = not
-par-a = (
-par-a = (
-par-a = (
-num1 = 101
-op-or = or
-ERROR Léxico!!
-par-c= )
-op-and = and
-num2 = 10
-op-sum = +
-num3 = 11
-Análisis Sintáctico
-No se ejecuta.
-
-Expresion: ((101 and or 01) or (110 xor 11)))10
-par-a = (
-par-a = (
-num1 = 101
-op-and = and
-op-or = or
-num2 = 01
-par-c= )
-op-or = or
-par-a = (
-num3 = 110
-op-xor = xor
-num4 = 11
-par-c= )
-par-c= )
-par-c= )
-num5 = 10
-Análisis Sintáctico
-Errores Sintácticos: 2
-
-Expresion: ((101 and or 01) or (110 xor 11)))*10 
+Expresion: ((101 and or 01) or (110 xor 11)))*10
 par-a = (
 par-a = (
 num1 = 101
@@ -209,41 +56,18 @@ Análisis Sintáctico
 Errores Sintácticos: 2
 
 
-Expresion: 10 and 1 or (10 and ) and 10 or 1010 (10 and ) and 10 and 1 or (10 and ) and 10 or 1010 (10 and )
-num1 = 10
-op-and = and
-num2 = 1
-op-or = or
+Expresion: not (101 or 120) and 10 + 11
+op-not = not
 par-a = (
-num3 = 10
-op-and = and
+num1 = 101
+op-or = or
+ERROR Léxico!!
 par-c= )
 op-and = and
-num4 = 10
-op-or = or
-num5 = 1010
-par-a = (
-num6 = 10
-op-and = and
-par-c= )
-op-and = and
-num7 = 10
-op-and = and
-num8 = 1
-op-or = or
-par-a = (
-num9 = 10
-op-and = and
-par-c= )
-op-and = and
-num10 = 10
-op-or = or
-num11 = 1010
-par-a = (
-num12 = 10
-op-and = and
-par-c= )
+num2 = 10
+op-sum = +
+num3 = 11
 Análisis Sintáctico
-Errores Sintácticos: 4
+No se ejecuta.
 
 
